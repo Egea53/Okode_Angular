@@ -1,0 +1,16 @@
+<div class="container-fluid">
+    <h2>
+        Movie search
+    </h2>
+    <div class="input-group">
+        <div class="form-outline">
+            <input id="search-input" placeholder="Search a movie" type="search" (change)="onChangeEvent($event)" id="form1" class="form-control" />
+        </div>
+    </div>
+
+    <div class="list-group">
+        <a *ngFor="let movie of movies" (click)="movieDetails(movie.title)" class="list-group-item list-group-item-action">
+            {{ movie.title }}
+        </a>
+    </div>
+</div>
